@@ -53,6 +53,8 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
     private static final double[] AMOUNTS = {1, 5, 10, 25, 50, 100};
     private static final String[] LABELS = {"1", "5", "10", "25", "50", "All"};
 
+    private static final int TRANSFER_LABELS_GAP = 16;
+
     private List<Map.Entry<String, Double>> masterChems = new ArrayList<>();
     private List<Map.Entry<String, Double>> containerChems = new ArrayList<>();
 
@@ -288,7 +290,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
         context.drawTextWithShadow(this.textRenderer, label, btnX, btnY - 10, 0xFFFFFF);
 
         for (int i = 0; i < LABELS.length; i++) {
-            int bx = btnX + i * 14;
+            int bx = btnX + i * TRANSFER_LABELS_GAP;
             boolean hovered = mouseX >= bx && mouseX < bx + 13
                     && mouseY >= btnY && mouseY < btnY + 12;
 
@@ -333,7 +335,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
             int btnY = y + 104;
             int btnX = x + 8;
             for (int i = 0; i < LABELS.length; i++) {
-                int bx = btnX + i * 14;
+                int bx = btnX + i * TRANSFER_LABELS_GAP;
                 if (mouseX >= bx && mouseX < bx + 13 && mouseY >= btnY && mouseY < btnY + 12) {
                     sendTransfer(AMOUNTS[i]);
                     return true;
