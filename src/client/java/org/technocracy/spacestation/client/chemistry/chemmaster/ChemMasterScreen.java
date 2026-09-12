@@ -279,7 +279,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
             return;
         }
 
-        int btnY = y + 88;
+        int btnY = y + 104;
         int btnX = x + 8;
 
         String label = selectedMasterChem != null
@@ -330,7 +330,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
         }
 
         if (selectedMasterChem != null || selectedContainerChem != null) {
-            int btnY = y + 88;
+            int btnY = y + 104;
             int btnX = x + 8;
             for (int i = 0; i < LABELS.length; i++) {
                 int bx = btnX + i * 14;
