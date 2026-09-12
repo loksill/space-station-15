@@ -24,22 +24,22 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
     // Left panel — grinding + container slots (side by side)
     private static final int SLOT_PANEL_LEFT = 6;
     private static final int SLOT_PANEL_TOP = 20;
-    private static final int SLOT_PANEL_WIDTH = 90;
-    private static final int SLOT_PANEL_HEIGHT = 90;
+    private static final int SLOT_PANEL_WIDTH = 100;
+    private static final int SLOT_PANEL_HEIGHT = 112;
     private static final int GRIND_SLOT_X = 15;
     private static final int GRIND_SLOT_Y = 30;
     private static final int CONTAINER_SLOT_X = 55;
     private static final int CONTAINER_SLOT_Y = 30;
 
     // Right panels — scrollable chemical lists
-    private static final int CHEM_PANEL_LEFT = 100;
+    private static final int CHEM_PANEL_LEFT = 112;
     private static final int CHEM_PANEL_WIDTH = BG_WIDTH - CHEM_PANEL_LEFT - 6;
     private static final int MASTER_PANEL_TOP = 20;
     private static final int MASTER_LIST_TOP = 30;
-    private static final int MASTER_LIST_HEIGHT = 90;
-    private static final int CONTAINER_PANEL_TOP = 122;
-    private static final int CONTAINER_LIST_TOP = 132;
-    private static final int CONTAINER_LIST_HEIGHT = 90;
+    private static final int MASTER_LIST_HEIGHT = 72;
+    private static final int CONTAINER_PANEL_TOP = 112;
+    private static final int CONTAINER_LIST_TOP = 122;
+    private static final int CONTAINER_LIST_HEIGHT = 72;
 
     private static final int ROW_HEIGHT = 18;
     private static final int MASTER_ROWS_VISIBLE = MASTER_LIST_HEIGHT / ROW_HEIGHT;
