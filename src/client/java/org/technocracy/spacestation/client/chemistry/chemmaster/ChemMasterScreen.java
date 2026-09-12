@@ -35,10 +35,10 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
     private static final int CHEM_PANEL_LEFT = 112;
     private static final int CHEM_PANEL_WIDTH = BG_WIDTH - CHEM_PANEL_LEFT - 6;
     private static final int MASTER_PANEL_TOP = 20;
-    private static final int MASTER_LIST_TOP = 30;
+    private static final int MASTER_LIST_TOP = 36;
     private static final int MASTER_LIST_HEIGHT = 72;
-    private static final int CONTAINER_PANEL_TOP = 112;
-    private static final int CONTAINER_LIST_TOP = 122;
+    private static final int CONTAINER_PANEL_TOP = 116;
+    private static final int CONTAINER_LIST_TOP = 132;
     private static final int CONTAINER_LIST_HEIGHT = 72;
 
     private static final int ROW_HEIGHT = 18;
