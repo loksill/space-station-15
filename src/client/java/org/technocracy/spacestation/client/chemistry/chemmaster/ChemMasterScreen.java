@@ -46,6 +46,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
     private static final int CONTAINER_ROWS_VISIBLE = CONTAINER_LIST_HEIGHT / ROW_HEIGHT;
 
     private static final int PLAYER_INV_TOP = 226;
+    private static final int PLAYER_INV_LEFT = 59;
 
     private int masterScrollOffset = 0;
     private int containerScrollOffset = 0;
@@ -74,7 +75,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
         super.init();
         this.titleX = 8;
         this.titleY = 6;
-        this.playerInventoryTitleX = 8;
+        this.playerInventoryTitleX = PLAYER_INV_LEFT;
         this.playerInventoryTitleY = PLAYER_INV_TOP - 12;
     }
 
@@ -204,7 +205,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
             for (int col = 0; col < 9; col++) {
                 // Vanilla slot items render at (slotX + 1, slotY + 1); shift the backplate
                 // slightly up-left so the item appears centered.
-                int sx = x + 8 + col * 18 - 1;
+                int sx = x + PLAYER_INV_LEFT + col * 18 - 1;
                 int sy = y + PLAYER_INV_TOP + row * 18 - 1;
                 context.fill(sx, sy, sx + 18, sy + 18, 0xFF1A1A1A);
                 context.drawBorder(sx, sy, 18, 18, 0xFF555555);
@@ -214,7 +215,7 @@ public class ChemMasterScreen extends HandledScreen<ChemMasterScreenHandler> {
         // Hotbar (1 row)
         int hotbarY = y + PLAYER_INV_TOP + 58 - 1;
         for (int col = 0; col < 9; col++) {
-            int sx = x + 8 + col * 18 - 1;
+            int sx = x + PLAYER_INV_LEFT + col * 18 - 1;
             context.fill(sx, hotbarY, sx + 18, hotbarY + 18, 0xFF1A1A1A);
             context.drawBorder(sx, hotbarY, 18, 18, 0xFF555555);
         }
