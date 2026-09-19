@@ -24,9 +24,9 @@ public class ChemMasterScreenHandler extends ScreenHandler {
         this.entity = be instanceof ChemMasterBlockEntity cm ? cm : null;
 
         if (this.entity != null) {
-            this.addSlot(new Slot(this.entity, 0, 24, 39));
+            this.addSlot(new Slot(this.entity, 0, 24, 47));
 
-            this.addSlot(new Slot(this.entity, 1, 64, 39) {
+            this.addSlot(new Slot(this.entity, 1, 64, 47) {
                 @Override
                 public boolean canInsert(ItemStack stack) {
                     return stack.getItem() instanceof ChemContainer;
